@@ -47,5 +47,14 @@
 </script>
 ```
 
+### e.preventDefault() vs. e.stopPropagation()
+이벤트 관련 동작에서 많이 사용되는 코드.
+
+- e.preventDefault()는 a태그의 href, button의 submit 같은 고유 이벤트를 중단.
+- e.stopPropagation()은 이벤트가 상위 엘리먼트에 전달되지 않도록 막아줌.
+e.preventDefault()는 태그의 고유 동작을 중단시키고, e.stopPropagation()은 상위 엘리먼트들로의 이벤트 전파를 중단시킨다.
+
+
+
 * 참고링크 : <https://joshua1988.github.io/web-development/javascript/event-propagation-delegation/></br>
 * 참고링크 : <https://ko.javascript.info/bubbling-and-capturing>
