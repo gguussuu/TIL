@@ -1,49 +1,28 @@
 /* Put your code here */
 .grid {
   display: grid;
-  grid-template: [row1-start] 100px [row1-end] 100px / 200px auto 150px;
-  grid-gap: 10px 20px; // row column
-  grid-template-areas:
-  "E . A"
-  "B C A"
-  "F D A"
+  grid-template: 100px 100px 100px / repeat(24, 25px);
+  /* width값이 25px씩 반복 */
+  /* grid-template: 100px 100px 100px / repeat(12, [small] 20px [large] 40px;
+  small이라는 이름과 large라는 이름을 가질 수 있따.
+  20,40,20,40px씩 반복..
+  */
 }
-/* areas안에 .를 쓰면 비워두는 것 */
-.grid div:nth-child(1){
-    grid-area: A;
-    //a~f까지 사용할 수 있다,
+.grid div:nth-child(1) {
+  grid-column: 1 / span 24;
 }
-.grid div:nth-child(2){
-    grid-area: B;
-    //a~f까지 사용할 수 있다,
+.grid div:nth-child(2) {
+     grid-column: auto / span 12;
 }
-.grid div:nth-child(3){
-    grid-area: C;
-    //a~f까지 사용할 수 있다,
+.grid div:nth-child(3) {
+    grid-column: auto / span 6;
 }
-.grid div:nth-child(4){
-    grid-area: D;
-    //a~f까지 사용할 수 있다,
+.grid div:nth-child(4) {
+    grid-column: auto / span 6;
 }
-.grid div:nth-child(5){
-    grid-area: E;
-    //a~f까지 사용할 수 있다,
+.grid div:nth-child(5) {
+    grid-column: auto / span 12;
 }
-/* .grid div:nth-child(1) {
-  grid-row: auto / span 2;
-  order: -1;
-  //order는 남용하면 안된당
+.grid div:nth-child(6) {
+    grid-column: auto / span 12;
 }
-.grid div:nth-chid(2) {
-  grid-area: 2/ 1/4/2; // 아래와 동일한 표현
-  // area는 직관적이지 않음
-  grid-row-start: 2;
-  grid-row-end: 4;
-  grid-column-start: 1;
-  grid-column-end: 2;
-}
-/* .grid div:nth-child(5) {
-  grid-row: 1/2;
-  grid-row: row1-start / row1-end;
-  grid-column: 1/3;
-} */ 
