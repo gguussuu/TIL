@@ -1,4 +1,7 @@
 import axios from 'axios';
+import _ from 'lodash';
+
+_.sample(undefined)
 
 interface User {
   name: string
