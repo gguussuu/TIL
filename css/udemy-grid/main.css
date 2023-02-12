@@ -1,28 +1,17 @@
 /* Put your code here */
 .grid {
   display: grid;
-  grid-template: 100px 100px 100px / repeat(24, 25px);
-  /* width값이 25px씩 반복 */
-  /* grid-template: 100px 100px 100px / repeat(12, [small] 20px [large] 40px;
-  small이라는 이름과 large라는 이름을 가질 수 있따.
-  20,40,20,40px씩 반복..
-  */
+  grid-gap: 10px;
+  grid-template: 100px 100px 100px / repeat(6, minmax(100px, 200px));
 }
-.grid div:nth-child(1) {
-  grid-column: 1 / span 24;
-}
-.grid div:nth-child(2) {
-     grid-column: auto / span 12;
-}
-.grid div:nth-child(3) {
-    grid-column: auto / span 6;
-}
-.grid div:nth-child(4) {
-    grid-column: auto / span 6;
-}
-.grid div:nth-child(5) {
-    grid-column: auto / span 12;
-}
-.grid div:nth-child(6) {
-    grid-column: auto / span 12;
-}
+
+/* grid template
+ grid template: minmax(100px, 200px) 100px 100px; 
+ 위와 같이 작성하면 min(최소값) 100px max(최대값) 200px의 영역만큼 차지는 아이템이 만들어진다.
+
+*/
+
+/* auto-fill vs. auto-fit
+auto-fill은 비어 있는 공간이 생김
+auto-fit은 비어 있는 공간이 있으면 0로 만들어서 존재하는 아이템들의 길이가 커진다.
+*/
